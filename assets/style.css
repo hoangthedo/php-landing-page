@@ -1,0 +1,119 @@
+.main {
+  padding: 20px;
+  border: 1px solid gray;
+}
+
+legend#title {
+  width: auto;
+}
+
+legend#title h3 {
+  display: inline;
+  margin: 0px 10px;
+}
+
+.login-button {
+  display: block;
+  margin: 0 auto;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: gold;
+  text-decoration: none;
+}
+
+.product {
+  margin-bottom: 20px;
+}
+
+table td {
+  height: 80px;
+  line-height: 80px;
+  padding: 0;
+  position: relative;
+}
+
+table td div {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buy-button {
+  display: block;
+  margin-top: 20px;
+  float: right;
+}
+ .contact_right h3{
+	font-size: 2em;
+	color: #555;
+	text-transform: uppercase;
+	margin: 1em 0;
+}
+.map{
+	width: 100%;
+	height:350px;
+	margin: 0 0 43px;
+	border: none;
+}
+.address p {
+	color: #333033;
+	font-size: 1em;
+	line-height: 20px;
+	margin: 0 0 16px;
+	font-style: normal;
+	text-transform: uppercase;
+}
+.address dd {
+	color: #aaa4ab;
+	font-size: 1em;
+	line-height: 20px;
+	font-weight: 300;
+}
+.contact-form input[type="text"] {
+	display: block;
+	width:70%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	outline: none;
+	margin: 1.5em 0;
+	font-size: 1em;
+	color: #999;
+}
+.contact-form textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	outline: none;
+	margin: 1.5em 0;
+	font-size: 1em;
+	color: #999;
+	height:300px;
+	resize: none;
+}
+.contact-form input[type="submit"] {
+	padding: 10px 25px;
+	color: #fff;
+	background: #F97E76;
+	font-size: 1.1em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	float:right;
+}
+.contact-form input[type="submit"]:hover{
+ 	background:#1DBAA5;
+}
