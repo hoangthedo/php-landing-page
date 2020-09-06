@@ -37,7 +37,15 @@
     <?php
     if (isset($_SESSION["email"])) {
     ?>
-    <span>Xin chào <?php echo $_SESSION['full_name'] ?>. </span><span><a href="/index.php?page=logout">Đăng xuất</a></span>
+    <span>Xin chào <?php echo $_SESSION['full_name'] ?>. </span>
+    <?php
+        if ($_SESSION["user"]['role'] == 'admin'){
+    ?>
+    <span><a href="/admin.php">Quản lý</a> |</span>
+    <?php 
+     }
+    ?>
+    <span><a href="/index.php?page=logout">Đăng xuất</a></span>
     <?php
     }
     ?>

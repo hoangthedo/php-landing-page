@@ -20,7 +20,7 @@ if (! empty($_POST["register-user"])) {
             echo $fullname, $password, $email, $address, $birthday, $gender, $phone;
             $insertId = $user->insertUserRecord($fullname, $password, $email, $address, $birthday, $gender, $phone);
             if (! empty($insertId)) {
-                $helper->redirect('/index.php?page=login&email=" . $email ."');
+                $helper->redirect('/index.php?page=login&email=' . $email);
             }
         } else {
             $errorMessage[] = "User already exists.";
@@ -37,7 +37,7 @@ if (! empty($_POST["register-user"])) {
             <?php
             if (! empty($errorMessage) && is_array($errorMessage)) {
                 ?>
-            <div class="error-message">
+            <div class="error-message" style="color: red;">
                 <?php 
                         foreach($errorMessage as $message) {
                             echo $message . "<br/>";
@@ -48,7 +48,7 @@ if (! empty($_POST["register-user"])) {
             }
             ?>
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Họ Tên</label>
+                <label for="name" class="col-sm-2 col-form-label">Họ Tên(*)</label>
                 <div class="col-sm-10">
                     <input type="text" name="fullname"
                         value="<?php if(isset($_POST['fullname'])) echo $_POST['fullname']; ?>" class="form-control"
@@ -56,20 +56,20 @@ if (! empty($_POST["register-user"])) {
                 </div>
             </div>
             <div class="form-group row">
-                <label for="accout" class="col-sm-2 col-form-label">Tài Khoản Email</label>
+                <label for="accout" class="col-sm-2 col-form-label">Tài Khoản Email(*)</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="accout" name="email"
                         value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>" placeholder="Email">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="pass" class="col-sm-2 col-form-label">Mật khẩu</label>
+                <label for="pass" class="col-sm-2 col-form-label">Mật khẩu(*)</label>
                 <div class="col-sm-10">
                     <input type="password" class="form-control" name="password" id="pass" placeholder="Mật khẩu">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="pass" class="col-sm-2 col-form-label">Nhập lại mật khẩu</label>
+                <label for="pass" class="col-sm-2 col-form-label">Nhập lại mật khẩu(*)</label>
                 <div class="col-sm-10">
                     <input type="password" class="form-control" name="confirm_password" id="pass"
                         placeholder="Nhập lại mật khẩu">
@@ -102,7 +102,7 @@ if (! empty($_POST["register-user"])) {
                 </div>
             </fieldset>
             <div class="form-group row">
-                <label for="address" class="col-sm-2 col-form-label">Địa chỉ</label>
+                <label for="address" class="col-sm-2 col-form-label">Địa chỉ(*)</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="address"
                         value="<?php if(isset($_POST['address'])) echo $_POST['address']; ?>" id="address"
@@ -110,7 +110,7 @@ if (! empty($_POST["register-user"])) {
                 </div>
             </div>
             <div class="form-group row">
-                <label for="phone" class="col-sm-2 col-form-label">Số điện thoại</label>
+                <label for="phone" class="col-sm-2 col-form-label">Số điện thoại(*)</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="phone"
                         value="<?php if(isset($_POST['phone'])) echo $_POST['phone']; ?>" id="phone"
@@ -118,7 +118,7 @@ if (! empty($_POST["register-user"])) {
                 </div>
             </div>
             <div class="form-group row">
-                <label for="dob" class="col-sm-2 col-form-label">Ngày sinh</label>
+                <label for="dob" class="col-sm-2 col-form-label">Ngày sinh(*)</label>
                 <div class="col-sm-10">
                     <input type="date" name="birthday"
                         value="<?php if(isset($_POST['birthday'])) echo $_POST['birthday']; ?>" class="form-control"
@@ -128,7 +128,7 @@ if (! empty($_POST["register-user"])) {
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <input type="checkbox" name="terms"> Tôi chấp nhận các điều khoản
+                    <input type="checkbox" class="" name="terms"> <label class="terms-label"> Tôi chấp nhận các điều khoản</label>
                 </div>
             </div>
             <input type="submit" name="register-user" value="Đăng ký" class="btn btn-primary btn-lg login-button">

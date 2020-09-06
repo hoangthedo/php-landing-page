@@ -10,6 +10,7 @@ if (isset($_POST['email'])){
     $checkAccount = $user->checkLogin($email, $password);
     if ($checkAccount){
         $user = $user->getUser($email);
+        $_SESSION['user'] = $user;
         $_SESSION['email'] = $email;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['full_name'] = $user['full_name'];

@@ -16,34 +16,38 @@ session_start();
         $title = "Food Cricle";
         $content = "views/home.php";
     }
-    if ($_GET['page'] == "login") {
+    else if ($_GET['page'] == "login") {
         $title = "Đăng nhập";
         $content = "views/login.php";
     }
-    if ($_GET['page'] == "bills") {
+    else if ($_GET['page'] == "bills") {
         $title = "Giỏ hàng";
         $content = "views/bills.php";
     }
-    if ($_GET['page'] == "cart") {
+    else if ($_GET['page'] == "cart") {
         $title = "Giỏ hàng";
         $content = "views/cart.php";
     }
-    if ($_GET['page'] == "product") {
+    else if ($_GET['page'] == "product") {
         $title = "Food Cricle";
         $content = "views/product.php";
     }
-    if ($_GET['page'] == "contact") {
+    else if ($_GET['page'] == "contact") {
         $title = "Contact";
         $content = "views/contact.php";
     }
-    if ($_GET['page'] == "signup") {
+    else if ($_GET['page'] == "signup") {
         $title = "Đăng ký";
         $content = "views/signup.php";
     }
-    if ($_GET['page'] == "logout") {
-        $title = "Food Cricle";
+    else if ($_GET['page'] == "logout") {
         session_destroy();
+        $title = "Food Cricle";
         $content = "views/home.php";
+    } else {
+        $title = "Not Found";
+        $content = "views/not_found.php";
     }
     include('layouts/application.php');
+    
 ?>

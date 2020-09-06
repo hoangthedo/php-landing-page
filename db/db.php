@@ -67,7 +67,12 @@ class Db
         if(!empty($paramType) && !empty($paramArray)) {
             $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
-        $stmt->execute();
+        $rs = $stmt->execute();
+        if ($rs == false){
+            echo "error:".$stmt->error;
+        } else {
+            echo $result->num_rows;
+        }
     }
     
     public function bindQueryParams($stmt, $paramType, $paramArray=array())

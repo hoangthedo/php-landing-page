@@ -25,14 +25,14 @@ class User
         if($valid == true) {
             // Password Matching Validation
             if ($_POST['password'] != $_POST['confirm_password']) {
-                $errorMessage[] = 'Passwords should be same.';
+                $errorMessage[] = 'Mật khẩu không khớp.';
                 $valid = false;
             }
             
             // Email Validation
             if (! isset($error_message)) {
                 if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-                    $errorMessage[] = "Invalid email address.";
+                    $errorMessage[] = "Email không hợp lệ";
                     $valid = false;
                 }
             }
@@ -40,13 +40,13 @@ class User
             // Validation to check if Terms and Conditions are accepted
             if (! isset($error_message)) {
                 if (! isset($_POST["terms"])) {
-                    $errorMessage[] = "Accept terms and conditions.";
+                    $errorMessage[] = "Bạn cần đồng ý với điều khoản.";
                     $valid = false;
                 }
             }
         }
         else {
-            $errorMessage[] = "All fields are required.";
+            $errorMessage[] = "Tất cả các trường đều bắt buộc.";
         }
         
         if ($valid == false) {
@@ -98,5 +98,40 @@ class User
         );
         $insertId = $this->ds->insert($query, $paramType, $paramArray);
         return $insertId;
+    }
+
+    function getAllUser(){
+        $query = "select * FROM users";
+        $users = $this->ds->select($query);
+        return $users;
+    }
+
+    function destroy($id){
+        $query = "DELETE FROM users WHERE id=?";
+        $this->ds->execute($query, "s", [$id]);
+    }
+
+    function getUserId($id){
+        $query = "select * FROM users WHERE id = ?;";
+        $paramType = "i";
+        $paramArray = array($id);
+        $user = $this->ds->select($query, $paramType, $paramArray);
+        return $user;
+    }
+
+    function updateUser($id, $full_name, $email, $address, $birthday, $gender, $phone){
+        $query = "UPDATE users
+        SET full_name = ?, email = ?, address = ?, birthday = ?, gender = ?, phone = ?
+        WHERE id=".$id.";";
+        $paramType = "ssssis";
+        $paramArray = array(
+            $full_name,
+            $email,
+            $address,
+            $birthday,
+            $gender,
+            $phone
+        );
+        $this->ds->execute($query, $paramType, $paramArray);
     }
 }

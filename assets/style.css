@@ -117,3 +117,18 @@ table td div {
 .contact-form input[type="submit"]:hover{
  	background:#1DBAA5;
 }
+
+.error-message{
+	color: red;
+}
+
+.form-check-label,
+.col-form-label,
+.terms-label{
+	font-size: 16px !important;
+}
+
+.form-check-label,
+.form-check-input{
+	float: left;
+}
