@@ -34,7 +34,7 @@ class Db
         $stmt = $this->conn->prepare($query);
         
         if(!empty($paramType) && !empty($paramArray)) {
-            $this->bindQueryParams($sql, $paramType, $paramArray);
+            $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
         
         $stmt->execute();
@@ -53,7 +53,6 @@ class Db
     
     public function insert($query, $paramType, $paramArray)
     {
-        print $query;
         $stmt = $this->conn->prepare($query);
         $this->bindQueryParams($stmt, $paramType, $paramArray);
         $stmt->execute();
@@ -66,7 +65,7 @@ class Db
         $stmt = $this->conn->prepare($query);
         
         if(!empty($paramType) && !empty($paramArray)) {
-            $this->bindQueryParams($stmt, $paramType="", $paramArray=array());
+            $this->bindQueryParams($stmt, $paramType, $paramArray);
         }
         $stmt->execute();
     }

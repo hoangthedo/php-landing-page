@@ -7,7 +7,7 @@ docker-compose up -d
 
 ##Create database
 ```bash
-docker-compose run --rm www php db/seeds.php
+docker-compose run --rm www php db/migrate.php
 ```
 
 web 

@@ -1,3 +1,7 @@
+<?php
+global $helper;
+$helper->require_user();
+?>
 <section class="container mt-4">
     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 10px;">
         <button type="button" class="btn btn-danger">Tất cả</button>

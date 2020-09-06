@@ -1,3 +1,7 @@
+<?php
+global $helper;
+$helper->require_user();
+?>
 <fieldset class="main">
     <legend id="title" style="padding-top:3%;">
         <h3>Danh sách sản phẩm</h3>
