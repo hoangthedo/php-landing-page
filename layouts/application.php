@@ -34,7 +34,7 @@ session_start();
             display:inline-block;
             border-radius: 2vw;
             margin:auto;
-            background-image: url("/picture/head-background.png");
+            background-image: url("/assets/picture/head-background.png");
             vertical-align: text-bottom;
         }
 
@@ -42,7 +42,7 @@ session_start();
             display: inline-block;
             border-radius: 2vw;
             width: 100%;
-            background-image: url("/picture/footer-background.png");
+            background-image: url("/assets/picture/footer-background.png");
             margin-top: 10vw;
         }
 

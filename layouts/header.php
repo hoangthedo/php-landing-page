@@ -1,5 +1,5 @@
 <div id="header">
-    <img src="/picture/logo.png" class="img-box">
+    <img src="/assets/picture/logo.png" class="img-box">
     <div style="display:inline-block; margin-left:3%; width:80%; padding-bottom: 3.5%;">
         <form class="form-inline form-search-add">
             <div class="input-group">

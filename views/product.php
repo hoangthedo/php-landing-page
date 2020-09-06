@@ -54,7 +54,7 @@
 
     <div id="right-box-body">
         <div class="box-food">
-            <img src="/picture/mixao.png" style="width: 100%;">
+            <img src="/assets/picture/mixao.png" style="width: 100%;">
             <div class="name-food">MÌ XÀO GIÒN</div>
             <div class="price-food">25.000 <span style="text-decoration: underline;">đ</span></div>
             <button type="button" class="btn btn-primary" style="display: inline-block; font-size: 1.5vw;">Buy</button>

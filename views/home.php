@@ -6,13 +6,13 @@
     </ol>
     <div class="carousel-inner" style="border-radius: 3vw;">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="/picture/slide_1.png" alt="First slide">
+            <img class="d-block w-100" src="/assets/picture/slide_1.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="/picture/slide_2.png" alt="Second slide">
+            <img class="d-block w-100" src="/assets/picture/slide_2.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="/picture/slide_3.png" alt="Third slide">
+            <img class="d-block w-100" src="/assets/picture/slide_3.png" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -49,7 +49,7 @@
     <p class="label-process">QUY TRÌNH ĐẶT HÀNG</p>
     <div style="margin:auto; width: 100%; text-align: center; ">
         <div style="display: inline-block; width:20%; margin-right: 12%;">
-            <img src="/picture/order.png" style="width: 100%;"><br>
+            <img src="/assets/picture/order.png" style="width: 100%;"><br>
             <p class="label-box-process">ĐẶT HÀNG</p>
             <p align="justify">
                 Khách hàng chọn thức ăn cần mua ở mục <b>Sản phẩm</b>,
@@ -63,7 +63,7 @@
 
 
         <div style="display: inline-block; width:20%; margin-right: 12%;">
-            <img src="/picture/delivery.png" style="width: 100%;"><br>
+            <img src="/assets/picture/delivery.png" style="width: 100%;"><br>
             <p class="label-box-process">GIAO HÀNG</p>
             <p align="justify">
                 Shipper của chúng tôi sẽ giao thức ăn đến cho bạn.
@@ -75,7 +75,7 @@
         </div>
 
         <div style="display: inline-block; width:20%; ">
-            <img src="/picture/receive.png" style="width: 100%;"><br>
+            <img src="/assets/picture/receive.png" style="width: 100%;"><br>
             <p class="label-box-process">NHẬN HÀNG</p>
             <p align="justify">
                 Khi nhận hàng, vui lòng <b>kiểm tra thức ăn</b>, đồng thời
