@@ -85,7 +85,7 @@ class User
     function insertUserRecord($full_name, $password, $email, $address, $birthday, $gender, $phone)
     {
         $passwordHash = md5($password);
-        $query = "INSERT INTO users (full_name, password, email, gender, address, phone, birthday) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO users email, gender, address, phone, birthday) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $paramType = "sssssis";
         $paramArray = array(
             $full_name,
